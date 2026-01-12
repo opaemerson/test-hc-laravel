@@ -120,7 +120,6 @@ Para consumir a fila dentro do container `laravel_app`:
 
 php artisan rabbit:consume
 
-![alt text](public/images/image-1.png)
 ---
 
 ## Observações
