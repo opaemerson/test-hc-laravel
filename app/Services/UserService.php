@@ -74,13 +74,11 @@ class UserService
 
     private function dispatchLogEmailJob(User $user): void
     {
-        $job = new PopulateLogEmails([
+        dispatch(new PopulateLogEmails([
             'message' => 'Bem-vindo ao sistema!',
             'user_id' => $user->id,
             'name' => $user->name,
             'email' => $user->email,
-        ]);
-
-        $job->handle();
+        ]));
     }
 }

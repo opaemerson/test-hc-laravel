@@ -78,11 +78,32 @@ Exemplos de endpoints REST usando `apiResource` para usuários:
 | DELETE | /api/users/{id}   | Deletar usuário        |
 | POST   | /api/authenticate | Autenticação de rotas  |
 
+---
 
 ## Documentação das Rotas
 
-Acesse: https://documenter.getpostman.com/view/48635147/2sBXVfirM2
+Acesse a documentação completa:  
+[Documentação API](https://documenter.getpostman.com/view/48635147/2sBXVfirM2)
+
 ---
+
+## Autenticação
+
+Todas as rotas da API **necessitam de um Bearer Token** para acesso.  
+O token é obtido fazendo login com as credenciais definidas no arquivo `.env`:
+
+API_LOGIN=login
+API_PASSWORD=password
+
+Para autenticar:
+
+1. Faça uma requisição `POST` para o endpoint `/authenticate` com os dados do `.env`.
+2. Você receberá um **Bearer Token** na resposta.
+3. Inclua o token no header de todas as requisições subsequentes:
+
+Authorization: Bearer <SEU_TOKEN>
+
+> Sem o token, a API retornará erro de autenticação.
 
 ## Acessando o container da aplicação
 
@@ -99,6 +120,7 @@ Para consumir a fila dentro do container `laravel_app`:
 
 php artisan rabbit:consume
 
+![alt text](image-1.png)
 ---
 
 ## Observações
