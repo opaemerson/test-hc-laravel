@@ -118,9 +118,15 @@ docker exec -it laravel_app bash
 ## Filas e Jobs
 
 O Laravel está configurado para usar **RabbitMQ** como driver de filas.  
-Para consumir a fila dentro do container `laravel_app`:
+Para consumir a fila, siga os passos:
 
-php artisan rabbit:consume
+1. Acesse o container da aplicação:
+
+`docker exec -it laravel_app bash`
+
+2. Execute o comando Artisan dentro do container:
+
+`php artisan rabbit:consume`
 
 ---
 
@@ -131,21 +137,21 @@ Armazenar o token de autenticação do usuário, Cachear informações do usuár
 
 Como acessar os dados
 
-Entre no container do Redis:
+1. Entre no container do Redis:
 
-docker exec -it laravel_redis bash
+`docker exec -it laravel_redis bash`
 
-Selecione o banco usado pela aplicação (geralmente 1):
+2. Selecione o banco usado pela aplicação (geralmente 1):
 
-SELECT 1
+`SELECT 1`
 
-Abra o CLI do Redis:
+3. Abra o CLI do Redis:
 
-redis-cli
+`redis-cli`
 
-Liste todas as chaves:
+4. Liste todas as chaves:
 
-KEYS *
+`KEYS *`
 
 ---
 
