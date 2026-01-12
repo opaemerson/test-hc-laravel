@@ -114,7 +114,7 @@ Authorization: Bearer <SEU_TOKEN>
 O Laravel está configurado para usar **RabbitMQ** como driver de filas.  
 Para consumir a fila, siga os passos:
 
-1. Acesse o container da aplicação:
+1. Acesse o container da aplicação (**via bash**):
 
 `docker exec -it laravel_app bash`
 
@@ -131,17 +131,17 @@ Armazenar o token de autenticação do usuário, Cachear informações do usuár
 
 Como acessar os dados
 
-1. Entre no container do Redis:
+1. Entre no container do Redis (**via sh**)
 
-`docker exec -it laravel_redis bash`
+`docker exec -it laravel_redis sh`
 
-2. Selecione o banco usado pela aplicação (geralmente 1):
-
-`SELECT 1`
-
-3. Abra o CLI do Redis:
+2. Abra o CLI do Redis:
 
 `redis-cli`
+
+3. Selecione o banco usado pela aplicação (geralmente 1):
+
+`SELECT 1`
 
 4. Liste todas as chaves:
 
