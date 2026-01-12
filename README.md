@@ -44,22 +44,16 @@ Antes de começar, você precisa ter instalado:
 git clone <URL_DO_SEU_REPOSITORIO>
 cd <NOME_DO_PROJETO>
 
-markdown
-Copiar código
 
 2. Dê permissão para o script `run.sh`:
 
 chmod +x run.sh
 
-lua
-Copiar código
 
 3. Execute o script para buildar e subir os containers:
 
 ./run.sh
 
-yaml
-Copiar código
 
 O `run.sh` faz o seguinte:
 
@@ -82,29 +76,28 @@ Exemplos de endpoints REST usando `apiResource` para usuários:
 | GET    | /api/users/{id}   | Mostrar usuário        |
 | PUT    | /api/users/{id}   | Atualizar usuário      |
 | DELETE | /api/users/{id}   | Deletar usuário        |
+| POST   | /api/authenticate | Autenticação de rotas  |
 
+
+## Documentação das Rotas
+
+Acesse: https://documenter.getpostman.com/view/48635147/2sBXVfirM2
 ---
 
 ## Acessando o container da aplicação
 
-Para acessar o container `app`:
+Para acessar o container `laravel_app`:
 
 docker exec -it laravel_app bash
-
-yaml
-Copiar código
 
 ---
 
 ## Filas e Jobs
 
 O Laravel está configurado para usar **RabbitMQ** como driver de filas.  
-Para consumir a fila dentro do container `app`:
+Para consumir a fila dentro do container `laravel_app`:
 
 php artisan rabbit:consume
-
-yaml
-Copiar código
 
 ---
 
