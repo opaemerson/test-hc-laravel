@@ -42,6 +42,7 @@ Antes de começar, você precisa ter instalado:
 1. Clone o repositório:
 
 git clone <URL_DO_SEU_REPOSITORIO>
+
 cd <NOME_DO_PROJETO>
 
 
@@ -82,8 +83,8 @@ Exemplos de endpoints REST usando `apiResource` para usuários:
 
 ## Documentação das Rotas
 
-Acesse a documentação completa:  
-[Documentação API](https://documenter.getpostman.com/view/48635147/2sBXVfirM2)
+Acesse a documentação completa e faça download da collection:  
+[Documentação API + Collection](https://documenter.getpostman.com/view/48635147/2sBXVfirM2)
 
 ---
 
@@ -93,6 +94,7 @@ Todas as rotas da API **necessitam de um Bearer Token** para acesso.
 O token é obtido fazendo login com as credenciais definidas no arquivo `.env`:
 
 API_LOGIN=login
+
 API_PASSWORD=password
 
 Para autenticar:
