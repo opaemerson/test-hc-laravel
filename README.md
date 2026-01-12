@@ -124,6 +124,31 @@ php artisan rabbit:consume
 
 ---
 
+## Redis
+
+O Redis é utilizado para:
+Armazenar o token de autenticação do usuário, Cachear informações do usuário pelo ID.
+
+Como acessar os dados
+
+Entre no container do Redis:
+
+docker exec -it laravel_redis bash
+
+Selecione o banco usado pela aplicação (geralmente 1):
+
+SELECT 1
+
+Abra o CLI do Redis:
+
+redis-cli
+
+Liste todas as chaves:
+
+KEYS *
+
+---
+
 ## Observações
 
 - As migrations são executadas automaticamente pelo `run.sh`.
