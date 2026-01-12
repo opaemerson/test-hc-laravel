@@ -107,12 +107,6 @@ Authorization: Bearer <SEU_TOKEN>
 
 > Sem o token, a API retornará erro de autenticação.
 
-## Acessando o container da aplicação
-
-Para acessar o container `laravel_app`:
-
-docker exec -it laravel_app bash
-
 ---
 
 ## Filas e Jobs
